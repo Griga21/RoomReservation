@@ -7,12 +7,14 @@ import com.reservation.repositories.OrderRepository;
 import com.reservation.repositories.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Transactional
 public class RoomService {
 
     private RoomRepository roomRepository;
@@ -23,7 +25,6 @@ public class RoomService {
         this.roomRepository = roomRepository;
         this.orderRepository = orderRepository;
     }
-
 
     public Room getRoomById(Integer id) {
         return roomRepository.findById(id).get();

@@ -4,10 +4,12 @@ import com.reservation.entity.Coworking;
 import com.reservation.repositories.CoworkingRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
+@Transactional
 public class CoworkingService {
     private CoworkingRepository coworkingRepository;
 

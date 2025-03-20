@@ -21,6 +21,6 @@ public class Room {
     @JoinColumn(name = "id")
     private Coworking coworking;
 
-    @OneToMany(mappedBy = "room", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "room", fetch = FetchType.EAGER)
     private List<Order> orderList;
 }

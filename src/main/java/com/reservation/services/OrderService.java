@@ -11,6 +11,7 @@ import com.reservation.repositories.OrderRepository;
 import com.reservation.repositories.RoomRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
 import static com.reservation.services.RoomService.checkData;
 
 @Service
+@Transactional
 public class OrderService {
     private OrderRepository orderRepository;
     private RoomRepository roomRepository;
